@@ -3,41 +3,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
+    
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:text="Difficulty"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="42sp" />
-
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        
     <Button
         android:id="@+id/button2"
         android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:text="Easy"
         android:textSize="35sp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="15dp"
         android:text="Medium"
         android:textSize="35sp" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="15dp"
         android:text="Hard"
         android:textSize="35sp" />
+    
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/diffNext"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Next"
+        android:textSize="25sp" />
 
 </LinearLayout>

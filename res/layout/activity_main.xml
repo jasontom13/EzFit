@@ -38,5 +38,14 @@
             android:textSize="20sp" />
 
     </LinearLayout>
+    
+    <TextView
+        android:id="@+id/goalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="Next"
+        android:textSize="30sp" />
 
 </LinearLayout>

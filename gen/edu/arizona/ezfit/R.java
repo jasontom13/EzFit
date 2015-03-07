@@ -23,8 +23,9 @@ public final class R {
         public static final int editText3=0x7f060008;
         public static final int editText4=0x7f06000c;
         public static final int goal=0x7f06000d;
-        public static final int goalButton=0x7f060010;
+        public static final int goalButton=0x7f060011;
         public static final int goalSeekBar=0x7f06000e;
+        public static final int massGain=0x7f060010;
         public static final int textView1=0x7f060000;
         public static final int textView2=0x7f060005;
         public static final int textView3=0x7f060007;

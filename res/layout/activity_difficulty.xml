@@ -26,6 +26,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
+        android:checked="false"
         android:text="Easy"
         android:textOff="Easy"
         android:textOn="Easy"
@@ -37,6 +38,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
+        android:checked="false"
         android:text="Medium"
         android:textOff="Medium"
         android:textOn="Medium"
@@ -48,6 +50,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
+        android:checked="false"
         android:text="Hard"
         android:textOff="Hard"
         android:textOn="Hard"
@@ -63,6 +66,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginTop="10dp"
         android:text="Next"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:clickable="false" />
 
 </LinearLayout>

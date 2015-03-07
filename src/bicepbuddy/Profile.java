@@ -1,6 +1,8 @@
 package bicepbuddy;
 
-public class Profile {
+import java.io.Serializable;
+
+public class Profile implements Serializable{
 
 	private String name;
 
@@ -8,7 +10,7 @@ public class Profile {
 	private Double height;
 	private Integer age;
 	
-	private Integer difficulty;
+	private String difficulty=null;
 	private Integer workouts; // per week
 	private int goal; // scale from 0/weight loss to 100/bulk
 	
@@ -60,11 +62,11 @@ public class Profile {
 		this.age = age;
 	}
 
-	public Integer getDifficulty() {
+	public String getDifficulty() {
 		return difficulty;
 	}
 
-	public void setDifficulty(Integer difficulty) {
+	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
 	}
 

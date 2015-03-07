@@ -3,6 +3,7 @@
 	<name>EzFit</name>
 	<comment></comment>
 	<projects>
+		<project>SwipeMenuListView</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

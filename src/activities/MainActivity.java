@@ -26,7 +26,6 @@ public class MainActivity extends Activity{
 			public void onClick(View v) {
 				Intent i = new Intent(MainActivity.this,DifficultyActivity.class);
 				user.setDifficulty(bar.getProgress());
-				Log.i("JASON", bar.getProgress()+"");
 				startActivity(i);
 				
 			}

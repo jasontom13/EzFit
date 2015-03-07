@@ -5,13 +5,20 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/infoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
         android:text="Information"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="42sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,22 +27,23 @@
         android:orientation="horizontal" >
     
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/ageInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:text="Age:"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/ageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="35dp"
+        android:layout_marginLeft="75dp"
         android:layout_marginRight="10dp"
+        android:layout_weight="0"
         android:ems="10"
         android:inputType="number" />
     
@@ -48,25 +56,34 @@
         android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/weightInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:text="Weight:"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/weightText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="number" />
+
+    <TextView
+        android:id="@+id/lbsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:text="Lbs."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     
      </LinearLayout>
     
@@ -77,28 +94,57 @@
         android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/heightInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
         android:text="Height:"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/ftText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="35dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:ems="10"
         android:inputType="numberDecimal" >
 
-        <requestFocus />
+        
     </EditText>
+
+    <TextView
+        android:id="@+id/ftInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="0dp"
+        android:text="Ft."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/inText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/inInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:text="In."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
     
      </LinearLayout>
     
@@ -109,17 +155,17 @@
         android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/daysInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp"
-        android:text="Days/Week"
+        android:text="Days per Week"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/daysText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -130,5 +176,16 @@
         android:inputType="number" />
     
      </LinearLayout>
+     
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="Next"
+        android:textSize="25sp" />
 
 </LinearLayout>

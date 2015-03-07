@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Difficulty"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="42sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="Easy"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="Medium"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="Hard"
+        android:textSize="35sp" />
+
+</LinearLayout>

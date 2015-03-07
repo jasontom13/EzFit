@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package edu.arizona.ezfit;
+package edu.arizona.ezfit.activites;
 
 public final class R {
     public static final class attr {

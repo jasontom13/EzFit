@@ -1,5 +1,8 @@
 package extras;
 
+import java.util.HashMap;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -9,26 +12,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import bicepbuddy.Exercise;
 import edu.arizona.ezfit.R;
 
-public class ExerciseAdapter extends ArrayAdapter<Exercise>{
+public class ExerciseAdapter extends BaseExpandableListAdapter{
 
-    Context context; 
-    int layoutResourceId;    
-    Exercise data[] = null;
+    private Context context; 
+    private List<Exercise> data;
+    private HashMap<String, String> childData;
     
-    public ExerciseAdapter(Context context, int layoutResourceId, Exercise[] data) {
-        super(context, layoutResourceId, data);
-        this.layoutResourceId = layoutResourceId;
+    //int layoutResourceId;    
+    //Exercise data[] = null;
+    
+    public ExerciseAdapter(Context context, List<Exercise> data, HashMap<String, String> childData) {
+        this.childData = childData;
         this.context = context;
         this.data = data;
     }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    /*public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         ExerciseHolder holder = null;
         
@@ -74,5 +79,67 @@ public class ExerciseAdapter extends ArrayAdapter<Exercise>{
     {
         ImageView isDone;
         TextView txtTitle;
-    }
+    } */
+
+	@Override
+	public int getGroupCount() {
+		return data.size();
+	}
+
+	@Override
+	public int getChildrenCount(int groupPosition) {
+
+		return 1;
+	}
+
+	@Override
+	public Object getGroup(int groupPosition) {
+		return data.get(groupPosition);
+	}
+
+	@Override
+	public Object getChild(int groupPosition, int childPosition) {
+		return childData;//.get(data.get(groupPosition)).get(childPosition);
+	}
+
+	@Override
+	public long getGroupId(int groupPosition) {
+		return groupPosition;
+	}
+
+	@Override
+	public long getChildId(int groupPosition, int childPosition) {
+		return childPosition;
+	}
+
+	@Override
+	public boolean hasStableIds() {
+		return false;
+	}
+
+	@Override
+	public View getGroupView(int groupPosition, boolean isExpanded,
+			View convertView, ViewGroup parent) {
+		String Exercise = data.get(groupPosition).getName();
+		
+		if(convertView == null){
+			LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView = infalInflater.inflate(R.layout.listview_header_row, null);
+		}
+				
+		return null;
+	}
+
+	@Override
+	public View getChildView(int groupPosition, int childPosition,
+			boolean isLastChild, View convertView, ViewGroup parent) {
+		
+		
+		return null;
+	}
+
+	@Override
+	public boolean isChildSelectable(int groupPosition, int childPosition) {
+		return false;
+	}
 }

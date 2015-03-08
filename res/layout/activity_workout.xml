@@ -16,11 +16,9 @@
 	    android:layout_height="1dp"
 	    android:background="@android:color/darker_gray"/>
 
-	<ListView
+	<ExpandableListView
 	    android:id="@+id/workoutList"
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content" >
-
-	</ListView>
+	    android:layout_height="wrap_content" />
 
 </LinearLayout>

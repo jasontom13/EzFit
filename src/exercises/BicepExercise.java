@@ -1,6 +1,7 @@
 package exercises;
 
 import java.io.Serializable;
+
 import bicepbuddy.Exercise;
 
 public class BicepExercise extends Exercise implements Serializable{

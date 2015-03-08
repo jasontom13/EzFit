@@ -27,7 +27,7 @@
         android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:background="@android:color/darker_gray"
+        android:background="#BBFFFFFF"
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 

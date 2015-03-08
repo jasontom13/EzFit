@@ -124,10 +124,19 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 			LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			convertView = infalInflater.inflate(R.layout.listview_item_row, null);
 		}
-		//ImageView checkmark = (ImageView) convertView.findViewById(R.id.checkmark);
-		//checkmark.setImageResource(R.drawable.checkmark);
+		ImageView checkmark = (ImageView) convertView.findViewById(R.id.checkmark);
 		final ImageView star = (ImageView) convertView.findViewById(R.id.star);
-		star.setImageResource(R.drawable.star);
+		if (data.get(groupPosition).getLiked()){
+			star.setImageResource(R.drawable.star2);
+		}
+		else{
+			star.setImageResource(R.drawable.star);
+		}
+		if (data.get(groupPosition).getDone()){
+			star.setImageResource(R.drawable.checkmark);
+		}
+		else{
+		}
 		//star.setId(1);
 		star.setOnClickListener(new OnClickListener(){
 			private boolean isStar1=true;
@@ -156,7 +165,7 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 		
 		TextView exerciseList = (TextView) convertView.findViewById(R.id.exerciseName);
 		exerciseList.setTypeface(null,Typeface.BOLD);
-		exerciseList.setText(exercise);
+		exerciseList.setText((groupPosition+1)+". " + exercise);
 		
 				
 		return convertView;

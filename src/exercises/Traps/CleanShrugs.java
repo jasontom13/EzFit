@@ -2,11 +2,14 @@ package exercises.Traps;
 
 import java.io.Serializable;
 
-import exercises.LegExercise;
+import exercises.TrapsExercise;
 
-public class CleanShrugs extends LegExercise implements Serializable {
+public class CleanShrugs extends TrapsExercise implements Serializable {
 
-	private static final long serialVersionUID = -4766416926180530840L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6462831309432213728L;
 	private String name = "Squats";
 	private String desc = "ask someone who works out";
 	private int sets = 5;

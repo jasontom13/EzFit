@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import bicepbuddy.Profile;
 import edu.arizona.ezfit.R;
@@ -69,28 +70,39 @@ public class DifficultyActivity extends Activity {
 						user.setDifficulty("Easy");
 					} else if (medium.isChecked()) {
 						user.setDifficulty("Medium");
-					} else {
+					} else if (hard.isChecked()){
 						user.setDifficulty("Hard");
 					}
-					String filename = "saved.dat";
-					FileOutputStream fileOutStream = null;
-					try {
-
-						fileOutStream = openFileOutput(filename,
-								Context.MODE_PRIVATE);
-						ObjectOutputStream outStream = new ObjectOutputStream(
-								fileOutStream);
-						outStream.writeObject(user);
-						outStream.close();
-
-					} catch (java.io.FileNotFoundException e) {
-						e.printStackTrace();
-					} catch (java.io.IOException e) {
-						e.printStackTrace();
+					else{
+						user.setDifficulty("None");
 					}
-					Intent i = new Intent(DifficultyActivity.this,
-							InfoActivity.class);
-					startActivity(i);
+					if (!user.getDifficulty().equals("None")){
+						String filename = "saved.dat";
+						FileOutputStream fileOutStream = null;
+						try {
+
+							fileOutStream = openFileOutput(filename,
+									Context.MODE_PRIVATE);
+							ObjectOutputStream outStream = new ObjectOutputStream(
+									fileOutStream);
+							outStream.writeObject(user);
+							outStream.close();
+
+						} catch (java.io.FileNotFoundException e) {
+							e.printStackTrace();
+						} catch (java.io.IOException e) {
+							e.printStackTrace();
+						}
+						
+						Intent i = new Intent(DifficultyActivity.this,
+								InfoActivity.class);
+						startActivity(i);
+					}
+					else{
+						Toast.makeText(getApplicationContext(), "Please select a difficulty.", 
+								   Toast.LENGTH_LONG).show();
+					}
+					
 				}
 
 			}

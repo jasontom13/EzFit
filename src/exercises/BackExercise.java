@@ -5,24 +5,30 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import exercises.Legs.Squats;
 import bicepbuddy.Exercise;
 
-public class BackExercise extends Exercise implements Serializable{
-	
+public class BackExercise extends Exercise implements Serializable {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 4531251549804747032L;
-	private static List<BackExercise> back;
-	public BackExercise(String name, String desc, String type, Integer sets,
-			Integer reps, Integer duration) {
-		
-		back = new ArrayList<BackExercise>();
+	private static final long serialVersionUID = -8790040851512659654L;
+	private static List<BackExercise> backList = new ArrayList<BackExercise>();
 
+	public BackExercise() {
 	}
-	
-	public static List<BackExercise> getBacks(){
-		Collections.shuffle(back);
-		return back;
+
+	public static List<BackExercise> getBack() {
+
+		//add all types
+
+		Collections.shuffle(backList);
+		return backList;
+	}
+
+	public static List<Exercise> getUpperBack() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

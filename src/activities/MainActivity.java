@@ -18,40 +18,30 @@ public class MainActivity extends Activity{
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		final VerticalSeekBar bar = (VerticalSeekBar) findViewById(R.id.goalSeekBar);
-		Button doneButton = (Button) findViewById(R.id.goalButton);
+		Button loss = (Button) findViewById(R.id.weightLoss);
+		Button gain = (Button) findViewById(R.id.massGain);
 		final Profile user = new Profile();
-		doneButton.setOnClickListener(new OnClickListener(){
+		loss.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				Intent i = new Intent(MainActivity.this,DifficultyActivity.class);
-				user.setDifficulty(bar.getProgress());
+				user.setGoal(0);
 				startActivity(i);
 				
 			}
 			
 		});
-		bar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-			
+		gain.setOnClickListener(new OnClickListener(){
 			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,DifficultyActivity.class);
+				user.setGoal(1);
+				startActivity(i);
 				
 			}
 			
-			@Override
-			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void onProgressChanged(SeekBar seekBar, int progress,
-					boolean fromUser) {
-				// TODO Auto-generated method stub
-				
-			}
 		});
+		
 	}
 	
 }

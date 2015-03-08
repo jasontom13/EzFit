@@ -1,31 +1,167 @@
 package bicepbuddy;
 
-public class Profile {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import exercises.BackExercise;
+import exercises.BicepExercise;
+import exercises.ChestExercises;
+import exercises.LegExercise;
+import exercises.LowerBackExercise;
+import exercises.ShoulderExercise;
+import exercises.TrapsExercise;
+import exercises.TricepExercise;
+
+public class Profile implements Serializable{
+
+	private static final long serialVersionUID = -5316580046572463031L;
 
 	private String name;
 
-	private Double weight;
-	private Double height;
+	private Double weight; //pounds
+	private int height; //inches
+	private Double bmi;
 	private Integer age;
 	
-	private Integer difficulty;
+	private int goal; // 0 loss or 1 gain
+	private String difficulty;
 	private Integer workouts; // per week
-	private int goal; // scale from 0/weight loss to 100/bulk
+	int workoutNumber; // from 1 to <workouts>
 	
-	int workoutsCompleted;
-	int exercisesCompleted;
-	int xp;
+	private int workoutsCompletedThisWeek = 0; // how many have they completed this week
+	private int workoutsCompletedEver = 0; // how many since starting the app
+		
+	private ArrayList<Exercise> twoOne = new ArrayList<Exercise>();
+	private ArrayList<Exercise> twoTwo = new ArrayList<Exercise>();
+	
+	private ArrayList<Exercise> threeOne = new ArrayList<Exercise>();
+	private ArrayList<Exercise> threeTwo = new ArrayList<Exercise>();
+	private ArrayList<Exercise> threeThree = new ArrayList<Exercise>();
+	
+	private ArrayList<Exercise> fourOne = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fourTwo = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fourThree = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fourFour = new ArrayList<Exercise>();
+	
+	private ArrayList<Exercise> fiveOne = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fiveTwo = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fiveThree = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fiveFour = new ArrayList<Exercise>();
+	private ArrayList<Exercise> fiveFive = new ArrayList<Exercise>();
+	
+	ArrayList<Exercise> oneDay = new ArrayList<Exercise>();
+	ArrayList<ArrayList<Exercise>> twoDays = new ArrayList<ArrayList<Exercise>>();
+	ArrayList<ArrayList<Exercise>> threeDays = new ArrayList<ArrayList<Exercise>>();
+	ArrayList<ArrayList<Exercise>> fourDays = new ArrayList<ArrayList<Exercise>>();
+	ArrayList<ArrayList<Exercise>> fiveDays = new ArrayList<ArrayList<Exercise>>();
+	
 
 	public Profile() {
-			//String name, Double weight, Double height, Integer age,
-			//Integer difficulty, Integer workouts, int goal) {
-//		this.name = name;
-//		this.weight = weight;
-//		this.height = height;
-//		this.age = age;
-//		this.difficulty = difficulty;
-//		this.workouts = workouts;
-//		this.goal = goal;
+		this.name = "EMPTY";
+		this.weight = -1.0;
+		this.height = -1;
+		this.age = -1;
+		this.difficulty = "EMPTY";
+		this.workouts = -1;
+		this.goal = -1;
+		
+		for (int i = 0; i<2; i++) {
+			oneDay.add(new LegExercise());
+			oneDay.add(new ChestExercises());
+			oneDay.add(new BicepExercise());
+			oneDay.add(new BackExercise());
+			oneDay.add(new ShoulderExercise());
+			oneDay.add(new TricepExercise());
+			oneDay.add(new TrapsExercise());
+		}
+		
+		twoOne.add(new LegExercise());
+		twoOne.add(new ChestExercises());
+		twoOne.add(new ChestExercises());
+		twoOne.add(new TricepExercise());
+		twoOne.add(new TricepExercise());
+		twoOne.add(new BackExercise());
+		twoOne.add(new LowerBackExercise());
+		twoOne.add(new ShoulderExercise());
+		twoOne.add(new BicepExercise());
+		twoOne.add(new TrapsExercise());
+		
+		twoTwo.add(new LegExercise());
+		twoTwo.add(new BackExercise());
+		twoTwo.add(new BackExercise());
+		twoTwo.add(new BicepExercise());
+		twoTwo.add(new BicepExercise());
+		twoTwo.add(new BackExercise()); //Deadlift
+		twoTwo.add(new ChestExercises());
+		twoTwo.add(new TricepExercise());
+		twoTwo.add(new TrapsExercise());
+		
+		twoDays.add(twoOne);
+		twoDays.add(twoTwo);
+		
+		for (int i = 0; i<5; i++) {
+			threeOne.add(new LegExercise());
+		}
+		
+		for (int i = 0; i<2; i++) {
+			threeTwo.add(new ChestExercises());
+			threeTwo.add(new ShoulderExercise());
+			threeTwo.add(new TricepExercise());
+		}
+		
+		threeThree.add(new BackExercise());
+		threeThree.add(new BicepExercise());
+		threeThree.add(new LowerBackExercise());
+		threeThree.add(new BicepExercise());
+		threeThree.add(new BackExercise());
+		
+		threeDays.add(threeOne);
+		threeDays.add(threeTwo);
+		threeDays.add(threeThree);
+		
+		for (int i = 0; i<6; i++) {
+			fourOne.add(new LegExercise());
+		}
+		
+		
+		fourTwo.add(new ChestExercises());
+		fourTwo.add(new TricepExercise());
+		fourTwo.add(new ChestExercises());
+		fourTwo.add(new ChestExercises());
+		fourTwo.add(new TricepExercise());
+		
+		for (int i = 0; i<3; i++) {
+			fourThree.add(new BackExercise());
+			fourThree.add(new BicepExercise());
+		}
+		
+		fourFour.add(new ShoulderExercise());
+		fourFour.add(new TricepExercise());
+		fourFour.add(new TrapsExercise());
+		fourFour.add(new ShoulderExercise());
+		fourFour.add(new TricepExercise());
+		fourFour.add(new ShoulderExercise());
+		
+		fourDays.add(fourOne);
+		fourDays.add(fourTwo);
+		fourDays.add(fourThree);
+		fourDays.add(fourFour);
+		
+		fiveOne = fourOne;
+		fiveTwo = fourTwo;
+		fiveThree = fourThree;
+		fiveFour = fourFour;
+		
+		for (int i = 0; i<5; i++)
+			fiveFive.add(new LegExercise());
+		fiveFive.add(new BackExercise());
+		
+		fiveDays.add(fiveOne);
+		fiveDays.add(fiveTwo);
+		fiveDays.add(fiveThree);
+		fiveDays.add(fiveFour);
+		fiveDays.add(fiveFive);
+		
 	}
 
 	public String getName() {
@@ -44,12 +180,12 @@ public class Profile {
 		this.weight = weight;
 	}
 
-	public Double getHeight() {
+	public int getHeight() {
 		return height;
 	}
 
-	public void setHeight(Double height) {
-		this.height = height;
+	public void setHeight(int feet, int inches) {
+		this.height = (12*feet)+inches;
 	}
 
 	public Integer getAge() {
@@ -60,11 +196,11 @@ public class Profile {
 		this.age = age;
 	}
 
-	public Integer getDifficulty() {
+	public String getDifficulty() {
 		return difficulty;
 	}
 
-	public void setDifficulty(Integer difficulty) {
+	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
 	}
 
@@ -76,11 +212,41 @@ public class Profile {
 		this.workouts = workouts;
 	}
 
-	public int getType() {
+	public int getGoal() {
 		return goal;
 	}
 
-	public void setType(int goal) {
+	public void setGoal(int goal) {
 		this.goal = goal;
+	}
+
+	public Double getBmi() {
+		bmi = calculateBmi();
+		return bmi;
+	}
+
+	public Double calculateBmi() {
+		//convert height (inches) to height (centimeters) and square the result
+		double heightConverted = Math.pow(this.height, 2);
+		//convert weight (pounds) to weight (kilograms)
+		double weightConverted = this.weight*703;
+		//calculate bmi
+		bmi = weightConverted/heightConverted;
+		return bmi;
+	}
+
+	public void completedWorkout() {
+		workoutsCompletedThisWeek++;
+		workoutsCompletedEver++;
+	}
+	
+	//Weekly counter
+	public int getWeeksWorkouts() {
+		return workoutsCompletedThisWeek;
+	}
+	
+	//Forever counter
+	public int getTotalWorkouts() {
+		return workoutsCompletedEver;
 	}
 }

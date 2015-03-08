@@ -1,6 +1,12 @@
 package bicepbuddy;
 
-public class Exercise {
+import java.io.Serializable;
+
+public abstract class Exercise implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1870576966012056821L;
 	private String name;
 	private String desc;
 	private String type; //anaerobic/aerobic
@@ -10,7 +16,7 @@ public class Exercise {
 	private Integer duration;
 	public Boolean core; //is exercise core or auxiliary
 
-	public Exercise(String name, String desc, String type, Integer sets,
+	/*public Exercise(String name, String desc, String type, Integer sets,
 			Integer reps, Integer duration) {
 		this.name = name;
 		this.desc = desc;
@@ -19,8 +25,12 @@ public class Exercise {
 		this.setReps(reps);
 		this.isDone = false;
 		this.setDuration(duration);
+	}*/
+	public Exercise(){
+		this.isDone=false;
 	}
-
+	
+	
 	public String getName() {
 		return this.name;
 	}
@@ -64,4 +74,6 @@ public class Exercise {
 	public void setReps(Integer reps) {
 		this.reps = reps;
 	}
+	
+	
 }

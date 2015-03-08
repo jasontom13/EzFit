@@ -6,22 +6,26 @@ import java.util.Collections;
 import java.util.List;
 
 import bicepbuddy.Exercise;
+import exercises.Legs.Squats;
 
-public class LegExercise extends Exercise implements Serializable{
+public class LegExercise extends Exercise implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1821040058248977046L;
-	private static List<LegExercise> legs;
+	private static final long serialVersionUID = 2669540857055087710L;
+	private static List<LegExercise> legList = new ArrayList<LegExercise>();
+
 	public LegExercise() {
-		
-		legs = new ArrayList<LegExercise>();
-
 	}
-	
-	public List<LegExercise> getLeg(){
-		Collections.shuffle(legs);
-		return legs;
+
+	public static List<LegExercise> getChest() {
+
+		legList.add(new Squats());
+
+		Collections.shuffle(legList);
+		return legList;
+	}
+
+	public static List<Exercise> getLegs() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

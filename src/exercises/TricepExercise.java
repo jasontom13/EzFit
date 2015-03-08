@@ -6,6 +6,14 @@ import java.util.Collections;
 import java.util.List;
 
 import bicepbuddy.Exercise;
+import exercises.Triceps.BodyUp;
+import exercises.Triceps.CableOneArmTricepExtension;
+import exercises.Triceps.CloseGripBarbellBenchPress;
+import exercises.Triceps.DumbbellOneArmTricepsExtension;
+import exercises.Triceps.ParallelBarDip;
+import exercises.Triceps.SeatedTricepsPress;
+import exercises.Triceps.StandingBentOverOneArmDumbbellTricepsExtension;
+import exercises.Triceps.TricepsPushdown;
 
 public class TricepExercise extends Exercise implements Serializable{
 	
@@ -13,16 +21,23 @@ public class TricepExercise extends Exercise implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 5381161887377682651L;
-	private static List<TricepExercise> triceps;
+	private static List<TricepExercise> tricepList = new ArrayList<TricepExercise>();
+	
 	public TricepExercise() {
-		
-		triceps = new ArrayList<TricepExercise>();
-
 	}
 	
-	public List<TricepExercise> getTriceps(){
-		Collections.shuffle(triceps);
-		return triceps;
+	public static List<TricepExercise> getTriceps(){
+		
+		tricepList.add(new CableOneArmTricepExtension());
+		tricepList.add(new CloseGripBarbellBenchPress());
+		tricepList.add(new BodyUp());
+		tricepList.add(new DumbbellOneArmTricepsExtension());
+		tricepList.add(new ParallelBarDip());
+		tricepList.add(new SeatedTricepsPress());
+		tricepList.add(new StandingBentOverOneArmDumbbellTricepsExtension());
+		tricepList.add(new TricepsPushdown());
+		
+		Collections.shuffle(tricepList);
+		return tricepList;
 	}
-
 }

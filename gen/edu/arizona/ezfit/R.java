@@ -28,6 +28,7 @@ public final class R {
         public static final int hardDiff=0x7f060003;
         public static final int heightInfo=0x7f06000b;
         public static final int imgDone=0x7f06001a;
+        public static final int imgDone2=0x7f060019;
         public static final int inInfo=0x7f06000f;
         public static final int inText=0x7f06000e;
         public static final int infoLabel=0x7f060005;
@@ -36,11 +37,11 @@ public final class R {
         public static final int mediumDiff=0x7f060002;
         public static final int nextInfo=0x7f060012;
         public static final int numDays=0x7f060011;
-        public static final int rowTextView=0x7f06001b;
-        public static final int rowTextView2=0x7f06001c;
+        public static final int rowTextView=0x7f06001c;
+        public static final int rowTextView2=0x7f06001d;
         public static final int textView1=0x7f060016;
         public static final int txtHeader=0x7f060018;
-        public static final int txtTitle=0x7f060019;
+        public static final int txtTitle=0x7f06001b;
         public static final int weightInfo=0x7f060008;
         public static final int weightLoss=0x7f060014;
         public static final int weightText=0x7f060009;
@@ -54,7 +55,6 @@ public final class R {
         public static final int listview_header_row=0x7f030004;
         public static final int listview_item_row=0x7f030005;
         public static final int simplerow=0x7f030006;
-        public static final int simplerow1=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

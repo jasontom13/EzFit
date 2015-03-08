@@ -17,5 +17,16 @@
         android:padding="10dp"
         android:text="Day 1: LOL"
         android:background="#336699" />
+     
+     <ImageView android:id="@+id/imgDone2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_action_important" />
 
 </LinearLayout>

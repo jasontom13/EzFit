@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ScaleDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,8 @@ public class ExerciseAdapter extends ArrayAdapter<Exercise>{
 //        	drawable.setBounds(0, 0, (int)(drawable.getIntrinsicWidth()*0.5), 
 //        	                         (int)(drawable.getIntrinsicHeight()*0.5));
 //        	ScaleDrawable sd = new ScaleDrawable(drawable, 0, 10, 10);
-        	holder.isDone.setImageResource(R.drawable.ic_action_important);
+        	holder.isDone.setImageResource(R.drawable.checkmark);
+        	Log.i("YO", "WAAAAAAT");
         }
         else{
         	Drawable drawable = context.getResources().getDrawable(R.drawable.checkmark);

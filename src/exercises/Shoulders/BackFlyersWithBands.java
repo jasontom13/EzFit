@@ -6,50 +6,16 @@ import exercises.ShoulderExercise;
 
 public class BackFlyersWithBands extends ShoulderExercise implements Serializable{
 
-	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 500712875276698891L;
 	private String name = "BackFlyersWithBands";
 	private String desc = "ask someone who works out";
 	private int sets = 5;
 	private int reps = 5;
 	
-	public BackFlyersWithBands() {
+	public BackFlyersWithBands(String name, String desc, Integer sets,
+			Integer reps, Boolean isDone, Integer duration, Boolean core) {
+		super(name, desc, sets, reps, isDone, duration, core);
 		// TODO Auto-generated constructor stub
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public Integer getSets() {
-		return sets;
-	}
-
-	public void setSets(int sets) {
-		this.sets = sets;
-	}
-
-	public Integer getReps() {
-		return reps;
-	}
-
-	public void setReps(int reps) {
-		this.reps = reps;
-	}
-
+	
 }

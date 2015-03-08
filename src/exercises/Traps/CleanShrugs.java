@@ -1,0 +1,21 @@
+package exercises.Traps;
+
+import java.io.Serializable;
+
+import exercises.LegExercise;
+
+public class CleanShrugs extends LegExercise implements Serializable {
+
+	private static final long serialVersionUID = -4766416926180530840L;
+	private String name = "Squats";
+	private String desc = "ask someone who works out";
+	private int sets = 5;
+	private int reps = 5;
+	
+	public CleanShrugs(String name, String desc, Integer sets, Integer reps,
+			Boolean isDone, Integer duration, Boolean core) {
+		super(name, desc, sets, reps, isDone, duration, core);
+		// TODO Auto-generated constructor stub
+	}
+
+}

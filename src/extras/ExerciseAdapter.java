@@ -3,15 +3,13 @@ package extras;
 import java.util.HashMap;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.ScaleDrawable;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -99,7 +97,7 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
-		return childData;//.get(data.get(groupPosition)).get(childPosition);
+		return childData.get(data.get(groupPosition).getName());
 	}
 
 	@Override
@@ -120,22 +118,69 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
-		String Exercise = data.get(groupPosition).getName();
+		String exercise = data.get(groupPosition).getName();
 		
 		if(convertView == null){
 			LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			convertView = infalInflater.inflate(R.layout.listview_header_row, null);
+			convertView = infalInflater.inflate(R.layout.listview_item_row, null);
 		}
+		//ImageView checkmark = (ImageView) convertView.findViewById(R.id.checkmark);
+		//checkmark.setImageResource(R.drawable.checkmark);
+		final ImageView star = (ImageView) convertView.findViewById(R.id.star);
+		star.setImageResource(R.drawable.star);
+		//star.setId(1);
+		star.setOnClickListener(new OnClickListener(){
+			private boolean isStar1=true;
+
+			@Override
+			public void onClick(View v) {
+				v.setActivated(!v.isActivated());
+				if(isStar1){
+					star.setImageResource(R.drawable.star2);
+					isStar1=!isStar1;
+					Log.i("THIS MEANS", "IT IS STAR GOING TO STAR2");
+				}
+				else if (!isStar1){
+					isStar1=!isStar1;
+					star.setImageResource(R.drawable.star);
+					Log.i("THIS MEANS", "IT IS STAR2 GOING TO STAR1");
+					
+				}
+				else{
+					Log.i("WTF","WTF");
+				}
 				
-		return null;
+			}
+			
+		});
+		
+		TextView exerciseList = (TextView) convertView.findViewById(R.id.exerciseName);
+		exerciseList.setTypeface(null,Typeface.BOLD);
+		exerciseList.setText(exercise);
+		
+				
+		return convertView;
 	}
 
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
+//		Exercise child = (Exercise) getChild(groupPosition,1);
+//		final String childText = (String) child.getDescription();
+		final String childText = (String) getChild(groupPosition,1);
+		
+		if (convertView==null){
+			LayoutInflater infl = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			convertView=infl.inflate(R.layout.listview_child_row, null);
+		}
+		
+		//ImageView check = (Image)
+		
+		TextView desc = (TextView) convertView.findViewById(R.id.childTxt);
+		desc.setText(childText);
 		
 		
-		return null;
+		return convertView;
 	}
 
 	@Override

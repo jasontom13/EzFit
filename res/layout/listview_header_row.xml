@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
-        android:gravity="center_vertical"
+        android:gravity="center_horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:textStyle="bold"
@@ -19,15 +19,5 @@
         android:text="Day 1: Chest"
         android:background="#336699" />
      
-     <ImageView android:id="@+id/imgDone2"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:gravity="center_vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:src="@drawable/ic_action_important" />
 
 </LinearLayout>

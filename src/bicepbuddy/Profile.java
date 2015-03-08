@@ -34,7 +34,7 @@ public class Profile implements Serializable{
 	private ArrayList<Exercise> twoOne = new ArrayList<Exercise>();
 	private ArrayList<Exercise> twoTwo = new ArrayList<Exercise>();
 	
-	private ArrayList<Exercise> threeOne = new ArrayList<Exercise>();
+	/*private ArrayList<Exercise> threeOne = new ArrayList<Exercise>();
 	private ArrayList<Exercise> threeTwo = new ArrayList<Exercise>();
 	private ArrayList<Exercise> threeThree = new ArrayList<Exercise>();
 	
@@ -49,11 +49,11 @@ public class Profile implements Serializable{
 	private ArrayList<Exercise> fiveFour = new ArrayList<Exercise>();
 	private ArrayList<Exercise> fiveFive = new ArrayList<Exercise>();
 	
-	ArrayList<Exercise> oneDay = new ArrayList<Exercise>();
-	ArrayList<ArrayList<Exercise>> twoDays = new ArrayList<ArrayList<Exercise>>();
-	ArrayList<ArrayList<Exercise>> threeDays = new ArrayList<ArrayList<Exercise>>();
-	ArrayList<ArrayList<Exercise>> fourDays = new ArrayList<ArrayList<Exercise>>();
-	ArrayList<ArrayList<Exercise>> fiveDays = new ArrayList<ArrayList<Exercise>>();
+	private ArrayList<Exercise> oneDay = new ArrayList<Exercise>();
+	private ArrayList<ArrayList<Exercise>> twoDays = new ArrayList<ArrayList<Exercise>>();
+	private ArrayList<ArrayList<Exercise>> threeDays = new ArrayList<ArrayList<Exercise>>();
+	private ArrayList<ArrayList<Exercise>> fourDays = new ArrayList<ArrayList<Exercise>>();
+	private ArrayList<ArrayList<Exercise>> fiveDays = new ArrayList<ArrayList<Exercise>>();*/
 	
 
 	public Profile() {
@@ -65,8 +65,8 @@ public class Profile implements Serializable{
 		this.workouts = -1;
 		this.goal = -1;
 		
-		for (int i = 0; i<2; i++) {
-			oneDay.add(new LegExercise());
+		/*for (int i = 0; i<2; i++) {
+			oneDay.add(new LegExercise(null, null, null, null, null, null, null));
 			oneDay.add(new ChestExercises());
 			oneDay.add(new BicepExercise());
 			oneDay.add(new BackExercise());
@@ -160,7 +160,7 @@ public class Profile implements Serializable{
 		fiveDays.add(fiveTwo);
 		fiveDays.add(fiveThree);
 		fiveDays.add(fiveFour);
-		fiveDays.add(fiveFive);
+		fiveDays.add(fiveFive);*/
 		
 	}
 
@@ -249,4 +249,21 @@ public class Profile implements Serializable{
 	public int getTotalWorkouts() {
 		return workoutsCompletedEver;
 	}
+	
+	/*public ArrayList<Exercise> getOneDay() {
+		return this.oneDay;
+	}
+	
+	public ArrayList<ArrayList<Exercise>> getTwoDays() {
+		return this.twoDays;
+	}
+	public ArrayList<ArrayList<Exercise>> getThreeDays() {
+		return this.threeDays;
+	}
+	public ArrayList<ArrayList<Exercise>> getFourDays() {
+		return this.fourDays;
+	}
+	public ArrayList<ArrayList<Exercise>> getFiveDays() {
+		return this.fiveDays;
+	}*/
 }

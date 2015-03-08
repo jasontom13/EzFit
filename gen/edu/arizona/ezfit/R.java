@@ -41,9 +41,10 @@ public final class R {
         public static final int mediumDiff=0x7f060002;
         public static final int nextInfo=0x7f060012;
         public static final int numDays=0x7f060011;
-        public static final int rowTextView=0x7f06001e;
-        public static final int rowTextView2=0x7f06001f;
-        public static final int star=0x7f06001d;
+        public static final int relativeLayout1=0x7f06001d;
+        public static final int rowTextView=0x7f06001f;
+        public static final int rowTextView2=0x7f060020;
+        public static final int star=0x7f06001e;
         public static final int textView1=0x7f060016;
         public static final int txtHeader=0x7f06001a;
         public static final int weightInfo=0x7f060008;

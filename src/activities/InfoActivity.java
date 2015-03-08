@@ -56,39 +56,42 @@ public class InfoActivity extends Activity{
 
 			@Override
 			public void onClick(View v) {
-				if (age.getText().toString().equals("")){
-					Toast.makeText(getApplicationContext(), "Please enter your age.", 
-							   Toast.LENGTH_LONG).show();
+				if (false){
+					
 				}
-				else if (weight.getText().toString().equals("")){
-					Toast.makeText(getApplicationContext(), "Please enter your weight.", 
-							   Toast.LENGTH_LONG).show();
-				}
-				else if (ft.getText().toString().equals("") || in.getText().toString().equals("")){
-					Toast.makeText(getApplicationContext(), "Please enter height.", 
-							   Toast.LENGTH_LONG).show();
-				}
+//				if (age.getText().toString().equals("")){
+//					Toast.makeText(getApplicationContext(), "Please enter your age.", 
+//							   Toast.LENGTH_LONG).show();
+//				}
+//				else if (weight.getText().toString().equals("")){
+//					Toast.makeText(getApplicationContext(), "Please enter your weight.", 
+//							   Toast.LENGTH_LONG).show();
+//				}
+//				else if (ft.getText().toString().equals("") || in.getText().toString().equals("")){
+//					Toast.makeText(getApplicationContext(), "Please enter height.", 
+//							   Toast.LENGTH_LONG).show();
+//				}
 				else{
-					user.setAge(Integer.parseInt(age.getText().toString()));
-					user.setWeight(Double.parseDouble(age.getText().toString()));
-					user.setHeight(Integer.parseInt(ft.getText().toString()), Integer.parseInt(in.getText().toString()));
-					user.setWorkouts(nums.getValue());
-					String filename = "saved.dat";
-					FileOutputStream fileOutStream = null;
-					try {
-
-						fileOutStream = openFileOutput(filename,
-								Context.MODE_PRIVATE);
-						ObjectOutputStream outStream = new ObjectOutputStream(
-								fileOutStream);
-						outStream.writeObject(user);
-						outStream.close();
-
-					} catch (java.io.FileNotFoundException e) {
-						e.printStackTrace();
-					} catch (java.io.IOException e) {
-						e.printStackTrace();
-					}
+//					user.setAge(Integer.parseInt(age.getText().toString()));
+//					user.setWeight(Double.parseDouble(age.getText().toString()));
+//					user.setHeight(Integer.parseInt(ft.getText().toString()), Integer.parseInt(in.getText().toString()));
+//					user.setWorkouts(nums.getValue());
+//					String filename = "saved.dat";
+//					FileOutputStream fileOutStream = null;
+//					try {
+//
+//						fileOutStream = openFileOutput(filename,
+//								Context.MODE_PRIVATE);
+//						ObjectOutputStream outStream = new ObjectOutputStream(
+//								fileOutStream);
+//						outStream.writeObject(user);
+//						outStream.close();
+//
+//					} catch (java.io.FileNotFoundException e) {
+//						e.printStackTrace();
+//					} catch (java.io.IOException e) {
+//						e.printStackTrace();
+//					}
 					Intent i = new Intent(InfoActivity.this,WorkoutActivity.class);
 					startActivity(i);
 				}

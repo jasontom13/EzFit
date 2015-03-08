@@ -116,7 +116,7 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 	}
 
 	@Override
-	public View getGroupView(int groupPosition, boolean isExpanded,
+	public View getGroupView(final int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
 		String exercise = data.get(groupPosition).getName();
 		
@@ -138,16 +138,16 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 				if(isStar1){
 					star.setImageResource(R.drawable.star2);
 					isStar1=!isStar1;
-					Log.i("THIS MEANS", "IT IS STAR GOING TO STAR2");
+					data.get(groupPosition).setLiked(true);
+					
 				}
 				else if (!isStar1){
 					isStar1=!isStar1;
 					star.setImageResource(R.drawable.star);
-					Log.i("THIS MEANS", "IT IS STAR2 GOING TO STAR1");
+					data.get(groupPosition).setLiked(false);
 					
 				}
 				else{
-					Log.i("WTF","WTF");
 				}
 				
 			}

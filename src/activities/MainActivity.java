@@ -24,7 +24,7 @@ public class MainActivity extends Activity{
 		loss.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this,DifficultyActivity.class);
+				Intent i = new Intent(MainActivity.this,WorkoutActivity.class);
 				user.setGoal(0);
 				startActivity(i);
 				
@@ -34,7 +34,7 @@ public class MainActivity extends Activity{
 		gain.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this,DifficultyActivity.class);
+				Intent i = new Intent(MainActivity.this,WorkoutActivity.class);
 				user.setGoal(1);
 				startActivity(i);
 				

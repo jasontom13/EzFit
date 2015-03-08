@@ -7,7 +7,7 @@
     <TextView
         android:id="@+id/diffLabel"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:text="Difficulty"
@@ -22,10 +22,11 @@
 
     <ToggleButton
         android:id="@+id/easyDiff"
-        android:layout_width="220dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
+        android:layout_weight="1"
         android:text="Easy"
         android:textOff="Easy"
         android:textOn="Easy"
@@ -33,10 +34,11 @@
 
     <ToggleButton
         android:id="@+id/mediumDiff"
-        android:layout_width="220dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
+        android:layout_weight="1"
         android:text="Medium"
         android:textOff="Medium"
         android:textOn="Medium"
@@ -44,10 +46,11 @@
 
     <ToggleButton
         android:id="@+id/hardDiff"
-        android:layout_width="220dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="15dp"
+        android:layout_weight="1"
         android:text="Hard"
         android:textOff="Hard"
         android:textOn="Hard"
@@ -57,8 +60,8 @@
     
     <Button
         android:id="@+id/diffNext"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="10dp"

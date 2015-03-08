@@ -33,6 +33,7 @@ import exercises.Chest.DipsChestVersion;
 import exercises.Legs.CalfRaises;
 import exercises.Legs.LegCurls;
 import exercises.Legs.LegExtensions;
+import exercises.Legs.Lunges;
 import exercises.Legs.Squats;
 import exercises.LowerBack.AtlasStones;
 import exercises.LowerBack.BarbellDeadlift;
@@ -594,6 +595,42 @@ public abstract class Exercise implements Serializable {
 						+ " that you do not go past the 90-degree angle limit.\n4. Repeat for the"
 						+ " recommended amount of times.", 0, 0, false, 0,
 				false));
+		
+		legList.add(new Lunges("Lunges", "1. Stand with your torso upright holding two dumbbells "
+				+ "in your hands by your sides. This will be your starting position.\n2. Step "
+				+ "backward with your right leg around two feet or so from the left foot and "
+				+ "lower your upper body down, while keeping the torso upright and maintaining"
+				+ " balance. Inhale as you go down. Tip: As in the other exercises, do not allow"
+				+ " your knee to go forward beyond your toes as you come down, as this will put "
+				+ "undue stress on the knee joint. Make sure that you keep your front shin "
+				+ "perpendicular to the ground. Keep the torso upright during the lunge; flexible "
+				+ "hip flexors are important. A long lunge emphasizes the Gluteus Maximus; a "
+				+ "short lunge emphasizes Quadriceps.\n3. Push up and go back to the starting "
+				+ "position as you exhale. Tip: Use the ball of your feet to push in order to "
+				+ "accentuate the quadriceps. To focus on the glutes, press with your heels.\n4."
+				+ " Now repeat with the opposite leg.", 0, 0, false, 0,
+				false));
+		
+		legList.add(new LegExtensions(
+				"Leg Extensions",
+				"1. For this exercise you will"
+						+ " need to use a leg extension machine. First choose your weight and sit"
+						+ " on the machine with your legs under the pad (feet pointed forward) and"
+						+ " the hands holding the side bars. This will be your starting position."
+						+ " Tip: You will need to adjust the pad so that it falls on top of your "
+						+ "lower leg (just above your feet). Also, make sure that your legs form "
+						+ "a 90-degree angle between the lower and upper leg. If the angle is less"
+						+ " than 90-degrees then that means the knee is over the toes which in "
+						+ "turn creates undue stress at the knee joint. If the machine is designed"
+						+ " that way, either look for another machine or just make sure that when"
+						+ " you start executing the exercise you stop going down once you hit the"
+						+ " 90-degree angle.\n2. Using your quadriceps, extend your legs to the "
+						+ "maximum as you exhale. Ensure that the rest of the body remains stationary"
+						+ " on the seat. Pause a second on the contracted position.\n3. Slowly "
+						+ "lower the weight back to the original position as you inhale, ensuring"
+						+ " that you do not go past the 90-degree angle limit.\n4. Repeat for the"
+						+ " recommended amount of times.", 0, 0, false, 0,
+				false));
 
 		return legList;
 	}
@@ -674,7 +711,14 @@ public abstract class Exercise implements Serializable {
 						+ "slightly forward.\n2. Shrug your shoulders towards your ears. While this "
 						+ "exercise can usually by loaded with heavier weight than a clean, avoid "
 						+ "overloading to the point that the execution slows down.",0, 0, false, 0, false));
-		
+		trapsList
+		.add(new CleanShrugs(
+				"Clean Shrugs",
+				"1. Begin with a shoulder width, double overhand or hook grip, with the bar "
+				+ "hanging at the mid thigh position. Your back should be straight and inclined "
+				+ "slightly forward.\n2. Shrug your shoulders towards your ears. While this "
+				+ "exercise can usually by loaded with heavier weight than a clean, avoid "
+				+ "overloading to the point that the execution slows down.",0, 0, false, 0, false));
 
 		return trapsList;
 	}

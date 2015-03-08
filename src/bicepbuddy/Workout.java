@@ -91,7 +91,7 @@ public class Workout implements Serializable {
 		String difficulty = profile.getDifficulty();
 		
 		// What work-out are they on for this week?
-		int workoutNum = profile.getWeeksWorkouts(); 
+		int workoutNum = profile.getWeeksWorkouts()+1; //plus 1 for current workout num
 
 		/* Weight Loss Track */
 		if (goal == 0) {
@@ -200,9 +200,9 @@ public class Workout implements Serializable {
 					exercises.add(back.remove(rand.nextInt(back.size())));
 					exercises.add(shoulders.remove(rand.nextInt(shoulders.size())));
 					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
-				}	
+				}
+				exercises.add(legs.remove(rand.nextInt(legs.size())));	
 				exercises.add(traps.remove(rand.nextInt(traps.size())));
-				exercises.add(legs.remove(rand.nextInt(legs.size())));
 				break;
 			case 2:
 				if (workoutNum == 1) {
@@ -277,8 +277,36 @@ public class Workout implements Serializable {
 					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
 					exercises.add(shoulders.remove(rand.nextInt(shoulders.size())));
 				}
-				//no break because first 5 days of 5-day schedule are same as 4-day schedule, should cascade this way
+				break;
+
 			case 5:
+				if (workoutNum == 1) {
+					for (int i = 0; i<6; i++) {
+						exercises.add(legs.remove(rand.nextInt(legs.size())));
+					}
+					
+				} else if (workoutNum == 2) {
+					exercises.add(chest.remove(rand.nextInt(chest.size())));
+					exercises.add(chest.remove(rand.nextInt(chest.size())));
+					exercises.add(chest.remove(rand.nextInt(chest.size())));
+					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
+					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
+					Collections.shuffle(exercises);
+					
+				} else if (workoutNum == 3) {
+					for (int i = 0; i<3; i++) {
+						exercises.add(back.remove(rand.nextInt(back.size())));
+						exercises.add(biceps.remove(rand.nextInt(biceps.size())));
+					}
+					
+				} else if (workoutNum == 4){
+					exercises.add(shoulders.remove(rand.nextInt(shoulders.size())));
+					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
+					exercises.add(traps.remove(rand.nextInt(traps.size())));
+					exercises.add(shoulders.remove(rand.nextInt(shoulders.size())));
+					exercises.add(triceps.remove(rand.nextInt(triceps.size())));
+					exercises.add(shoulders.remove(rand.nextInt(shoulders.size())));
+				}
 				if (workoutNum == 5) {
 					for (int i = 0; i<5; i++) {
 						exercises.add(legs.remove(rand.nextInt(legs.size())));
@@ -291,10 +319,10 @@ public class Workout implements Serializable {
 			default:
 				break;
 			}
-			
+		}
 			for (Exercise ex : exercises)
 				ex.setDifficulty(difficulty, goal);
-		}
+		
 		
 		return exercises;
 	}

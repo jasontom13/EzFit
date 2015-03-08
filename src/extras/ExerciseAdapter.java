@@ -133,7 +133,7 @@ public class ExerciseAdapter extends BaseExpandableListAdapter{
 			star.setImageResource(R.drawable.star);
 		}
 		if (data.get(groupPosition).getDone()){
-			star.setImageResource(R.drawable.checkmark);
+			checkmark.setImageResource(R.drawable.checkmark);
 		}
 		else{
 		}
